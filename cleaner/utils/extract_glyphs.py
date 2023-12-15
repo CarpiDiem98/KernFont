@@ -24,3 +24,15 @@ def dictionary_to_glyphs_matrix(
     sx = font.glyph(sx.replace("public.kern1.", "")).as_matrix().with_sidebearings()
     dx = font.glyph(dx.replace("public.kern2.", "")).as_matrix().with_sidebearings()
     return sx, dx
+
+
+def process_partition(partition):
+    index = []
+    for row in partition.iterrows():
+        try:
+            _, _ = dictionary_to_glyphs_matrix(
+                row[1]["otf"], row[1]["sx"], row[1]["dx"]
+            )
+        except Exception as e:
+            index.append(row[0])
+    return index
