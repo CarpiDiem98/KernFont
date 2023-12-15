@@ -1,9 +1,13 @@
 from typing import Tuple
 import numpy as np
+import os
 import tensorfont as tf
+from cleaner.logger.logger import logger
 
 
-def dictionary_to_glyphs_matrix(otf: str, sx: str, dx: str) -> Tuple[np.ndarray, np.ndarray]:
+def dictionary_to_glyphs_matrix(
+    otf: str, sx: str, dx: str
+) -> Tuple[np.ndarray, np.ndarray]:
     """
     Convert two glyphs from an OpenType font file to matrices with sidebearings.
 
