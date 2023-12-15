@@ -1,0 +1,24 @@
+experiment:
+  # It contains all the about the grids and the group of runs:
+  name: KernFont Regression # name of the logger platform experiment
+  group: FirstGroup # name of group of experiments for the logger platform
+  annotations: "/home/emanuele/Workspace/kernfont/annotations.csv"
+
+parameters:
+  # Contains the parameters to build the grid.
+  tags: [test] # list of tags to attach to the run in logger platform
+
+  train_params:
+    loss:
+      name: MAE # class loss name
+      params:
+    seed: 42 # random seed to set
+    max_epochs: 5
+    initial_lr: 0.001
+    optimizer: AdamW
+
+  model:
+    name: AlexNetRegression # path to model class or model name contained in EzDL or super-gradients
+
+  dataset: # parameters depending on the class you defined for the dataset
+    batch_size: 5
