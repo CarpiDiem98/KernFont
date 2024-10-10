@@ -1,7 +1,8 @@
 # KernFont
-Addestrare un modello in Python nell'eseguire il task di kerning delle font.
+Welcome to project MachineKern. This is my master's degree thesis in Deep Learning. 
+The goal is the compair of classic machine learning system and the new computer vision neural network.
 
-## Librerie fondamentali
+## Python Libraries:
 - [ ] tensofont
 - [ ] fontTools
 - [ ] ufoLib
@@ -13,7 +14,7 @@ Addestrare un modello in Python nell'eseguire il task di kerning delle font.
 
     python3 -m venv venv
 
-Installare i requisiti necessari per il progetto.
+Install requirements for the project
 
     pip install -r requirements.txt
 
